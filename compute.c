@@ -40,8 +40,8 @@ int main(int argc, char **argv) {
 
   time_t end = time(NULL);
 
-  fprintf(stderr, "norm: %.6f\n", norm);
-  fprintf(stderr, "elapsed time: %.6f\n", difftime(end, start));
+  fprintf(stdout, "norm: %.3f\n", norm);
+  fprintf(stdout, "elapsed time: %.3f\n", difftime(end, start));
 
   free(mat);
 

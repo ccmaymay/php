@@ -3,10 +3,7 @@ CFLAGS = -O2 -std=gnu99
 .PHONY: all
 all: generate compute
 
-generate: generate.c
-	gcc -o $@ $(CFLAGS) $< -lgsl -lcblas
-
-compute: compute.c
+generate compute: %: %.c
 	gcc -o $@ $(CFLAGS) $< -lm
 
 .PHONY: clean
